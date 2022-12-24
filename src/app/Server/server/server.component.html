@@ -17,19 +17,18 @@ Event Binding is nothing but the communication b/w view and model(ts) .As the na
 
 <label>Server Name<label>
 
-  <input type="text" class="form-control" (input)="onUpdateServerName($event)">
-<p>{{ServerName}}</p>
+  <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+  <input type="text" class="form-control" [(ngModel)]='ServerName'>
+<!-- <p>{{ServerName}}</p> -->
 <button class="btn btn-primary" [disabled]="!allowServer" (click)="AddedServer()">Add Server</button>
 <p>{{ServerStatus}}</p>
 <p [innerText]="allowServer"></p>
 
 <!-- Two Way Data Binding
 
-It Serves as a communication between the Html andthe typescript  -->
+It Serves as a communication between the Html and the typescript  -->
 
 
-<input type="text" class="form-control" [ngModel]="ServerName">
-<p>{{ServerName}}
 
 
 

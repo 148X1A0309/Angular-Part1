@@ -24,8 +24,10 @@ ServerName="Chandu"
   getServerStatus(){
     return this.serverStatus;
   }
+
+  //All together 4 Directives are used here if you observe
   AddedServer(){
-    this.ServerStatus="Server was created";
+    this.ServerStatus="Server was created!" + 'Name is '+ this.ServerName;
   }
 
   onUpdateServerName(event:any){
