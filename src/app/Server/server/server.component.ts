@@ -8,15 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class ServerComponent implements OnInit {
 serverId:number =10;
 serverStatus:string="offline";
-allowServer:true;
+allowServer=false;
+ServerStatus="No Server was created";
 
 
-  constructor() { }
+  constructor() { 
+    setTimeout(()=>{
+      this.allowServer=true;
+    },2000);
+  }
 
   ngOnInit() {
   }
   getServerStatus(){
     return this.serverStatus;
   }
-
+  AddedServer(){
+    this.ServerStatus="Server was created";
+  }
 }

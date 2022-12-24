@@ -10,4 +10,12 @@
 
 Property Binding is the Binding of the properties associated with elements like button -->
 
-<button class="data" [disabled]="allowServer">Add Server</button>
+
+<!-- //Event Binding
+ 
+Event Binding is nothing but the communication b/w view and model(ts) .As the name indicates it occurs only when the event occurs -->
+
+<button class="btn btn-primary" [disabled]="!allowServer" (click)="AddedServer()">Add Server</button>
+<p>{{ServerStatus}}</p>
+
+<p [innerText]="allowServer"></p>
