@@ -1,2 +1,3 @@
-<p class="Warning">Say my name as Chandu</p>
+<!-- <p class="Warning">Say my name as Chandu</p> -->
 
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online:ServerStatus==='online'}">Hey your {{'server'}} with ID {{serverId}} is  {{getServerStatus()}}</p>

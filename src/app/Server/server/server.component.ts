@@ -11,6 +11,7 @@ serverStatus:string="offline";
 allowServer=false;
 ServerStatus="No Server was created";
 ServerName="Chandu"
+serverCreated=false;
 
 
   constructor() { 
@@ -27,6 +28,7 @@ ServerName="Chandu"
 
   //All together 4 Directives are used here if you observe
   AddedServer(){
+    this.serverCreated=true;
     this.ServerStatus="Server was created!" + 'Name is '+ this.ServerName;
   }
 

@@ -21,8 +21,10 @@ Event Binding is nothing but the communication b/w view and model(ts) .As the na
   <input type="text" class="form-control" [(ngModel)]='ServerName'>
 <!-- <p>{{ServerName}}</p> -->
 <button class="btn btn-primary" [disabled]="!allowServer" (click)="AddedServer()">Add Server</button>
-<p>{{ServerStatus}}</p>
-<p [innerText]="allowServer"></p>
+<!-- <p>{{ServerStatus}}</p> -->
+<!-- <p [innerText]="allowServer"></p> -->
+<!-- * in ngIf indicate that it is structural Directive -->
+<p *ngIf="serverCreated">Server was created and the name is {{ServerName}}</p>
 
 <!-- Two Way Data Binding
 
