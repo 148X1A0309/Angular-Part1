@@ -1,0 +1,3 @@
+<input type="text" class="form-control" [(ngModel)]="MyName">
+<p>{{MyName}}
+<button class="btn btn-success" [disabled]="MyName ===''" (click)="Submit()">Submit</button>
