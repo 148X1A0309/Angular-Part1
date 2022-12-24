@@ -10,6 +10,7 @@ serverId:number =10;
 serverStatus:string="offline";
 allowServer=false;
 ServerStatus="No Server was created";
+ServerName="Chandu"
 
 
   constructor() { 
@@ -25,5 +26,10 @@ ServerStatus="No Server was created";
   }
   AddedServer(){
     this.ServerStatus="Server was created";
+  }
+
+  onUpdateServerName(event:any){
+ console.log(event);
+ this.ServerName=(<HTMLInputElement>event.target).value
   }
 }

@@ -15,7 +15,22 @@ Property Binding is the Binding of the properties associated with elements like 
  
 Event Binding is nothing but the communication b/w view and model(ts) .As the name indicates it occurs only when the event occurs -->
 
+<label>Server Name<label>
+
+  <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{ServerName}}</p>
 <button class="btn btn-primary" [disabled]="!allowServer" (click)="AddedServer()">Add Server</button>
 <p>{{ServerStatus}}</p>
-
 <p [innerText]="allowServer"></p>
+
+<!-- Two Way Data Binding
+
+It Serves as a communication between the Html andthe typescript  -->
+
+
+<input type="text" class="form-control" [ngModel]="ServerName">
+<p>{{ServerName}}
+
+
+
+
